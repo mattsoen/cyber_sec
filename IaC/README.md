@@ -8,3 +8,6 @@ Ensure Terraform is installed
 
 License
 This project is licensed under the MIT License.
+
+Files
+gcp_network.tf - This provisions a GCP network and basic firewall rules. This is based on learnings from the the Google Cloud Cybersecurity Professional course.
