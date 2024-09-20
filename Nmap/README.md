@@ -6,8 +6,8 @@ This directory features various Nmap scans using PowerShell. Each script is desi
 
 Prerequisites:
 
-Nmap: Ensure Nmap is installed on your system.
-PowerShell: Make sure you have PowerShell available to run the scripts.
+Ensure Nmap is installed on your system.
+Make sure you have PowerShell available to run the scripts.
 
 License:
 
