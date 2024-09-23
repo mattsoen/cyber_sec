@@ -1,0 +1,35 @@
+rule unusual_file_access
+{
+  meta:
+    author = "MO"
+    description = "Detects unusual access to sensitive files outside of normal business hours"
+    severity = "HIGH"
+
+  events:
+    $file_access.metadata.event_type = "FILE_ACCESS"
+    $file_access.target.file.path = $file_path
+    $file_access.security_result.action = "ALLOW"
+
+    $ts = $file_access.metadata.event_timestamp.seconds
+
+    // Check for access during non-business hours (19:00 to 07:00)
+    (
+        (timestamp.get_hour($ts, "UTC") >= 0 and timestamp.get_hour($ts, "UTC") < 7) or
+        timestamp.get_hour($ts, "UTC") >= 19
+    )
+
+    // Check if accessed file is in the sensitive directory
+    $file_path matches "^/sensitive_directory/.*"
+
+  match:
+    // Detect specific keywords in the event log or related metadata
+    $file_access.metadata.message contains "export" or
+    $file_access.metadata.message contains "download" or
+    $file_access.metadata.message contains "transfer"
+
+  outcome:
+    $access_frequency = count($file_access)
+
+  condition:
+    $file_access and $access_frequency > 5 and $match
+}
