@@ -1,0 +1,44 @@
+rule out_of_hours_admin_login
+{
+  meta:
+    author = "MO"
+    description = "Detects out of hours successful authentication for admin accounts"
+    severity = "MEDIUM"
+
+  events:
+    $out_of_hours_login.metadata.event_type = "USER_LOGIN"
+    $out_of_hours_login.target.user.email_addresses = $user
+    $out_of_hours_login.security_result.action = "ALLOW"
+
+    (
+        $out_of_hours_login.target.user.user_role = "ADMINISTRATOR" or
+        $out_of_hours_login.target.user.attribute.roles.type = "ADMINISTRATOR"
+    )
+
+    $ts = $out_of_hours_login.metadata.event_timestamp.seconds
+
+    // Saturday and Sunday
+    (
+        01 = timestamp.get_day_of_week($ts, "UTC") or
+        07 = timestamp.get_day_of_week($ts, "UTC")
+    ) or
+    // Between 19:00 and 07:00
+    (
+        (timestamp.get_hour($ts, "UTC") >= 0 and timestamp.get_hour($ts, "UTC") < 7) or
+        timestamp.get_hour($ts, "UTC") > 19
+    )
+
+  outcome:
+    $weekend_activity = max(
+        if (01 = timestamp.get_day_of_week($ts, "UTC"), 75) +
+        if (07 = timestamp.get_day_of_week($ts, "UTC"), 70)
+    )
+
+    $after_hours_activity = max(
+        if ((timestamp.get_hour($ts, "UTC") >= 0 and timestamp.get_hour($ts, "UTC") < 7) or
+        timestamp.get_hour($ts, "UTC") > 19, 50)
+    )
+ 
+  condition:
+    $out_of_hours_login
+}
