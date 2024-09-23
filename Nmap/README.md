@@ -14,3 +14,6 @@ License:
 This project is licensed under the MIT License.
 
 Files:
+
+nmap_results_alert.ps1 - This runs a Nmap scan and sends an email alert for specified open ports. This is based on learnings from the Nmap For Ethical Hackers course.
+nmap_results_to_file.ps1 - This runs a Nmap scan and outputs the results in a csv file. This is based on learnings from the Nmap for Ethical Hackers course.
