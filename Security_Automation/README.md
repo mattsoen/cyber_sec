@@ -14,4 +14,10 @@ This project is licensed under the MIT License.
 
 Files:
 
-password_policy_compliance.ps1 - This automatically reviews, corrects and enforces the local password policy.
+password_policy_compliance.ps1 - This automatically reviews, corrects and enforces the local password policy. This is based on learnings from the Security+ course.
+
+basic_hardening.ps1 - This automatically performs basic security hardening tasks such as enabling Windows Defender and disabling unnecessary services. This is based on learnings from the Sceurity+ course.
+
+firewall_config.ps1 - This automatically configures basic firewall rules. This is based on learnings from the Security+ course.
+
+security_auditing.ps1 - This automatically performs a scan on open ports to alert if the state has changed. This is based on learnings from the Security+ course.
