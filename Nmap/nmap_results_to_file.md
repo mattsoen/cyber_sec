@@ -39,7 +39,7 @@ This PowerShell script performs a scan using Nmap on a specified target and expo
      .\NmapScanExport.ps1
      ```
 
-## Customization
+## Customisation
 - **Scan Type**: Modify the Nmap command in the `$target` variable to change the type of scan or add additional flags.
 - **Output Path**: Adjust the `$outputFile` variable to save the CSV file in a different location or with a different naming convention.
 
