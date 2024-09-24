@@ -12,6 +12,10 @@ License:
 
 This project is licensed under the MIT License.
 
+Documentation:
+
+Each file has an associated .md file outlining key details for reference. 
+
 Files:
 
 gcp_network.tf - This provisions a GCP network and basic firewall rules. This is based on learnings from the Google Cloud Cybersecurity Professional course.
