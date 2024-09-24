@@ -15,3 +15,5 @@ This project is licensed under the MIT License.
 Files:
 
 gcp_network.tf - This provisions a GCP network and basic firewall rules. This is based on learnings from the Google Cloud Cybersecurity Professional course.
+
+gcp_storage_bucket.tf - This provisions a GCP storage bucket and pub/sub topic. This is based on learnings from the Google Cloud Cybersecurity Professional course.
