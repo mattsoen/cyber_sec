@@ -13,6 +13,10 @@ License:
 
 This project is licensed under the MIT License.
 
+Documentation:
+
+Each file has an associated .md file outlining key details for reference.
+
 Files:
 
 dumpcap_ring_buffer.ps1 - This script automatically captures and saves packet data to a series of ring-buffered files. This is based on learnings from the Wireshark Ultimate course.
