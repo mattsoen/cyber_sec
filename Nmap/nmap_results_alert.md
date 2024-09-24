@@ -11,14 +11,14 @@ This PowerShell script performs a network scan using Nmap on a specified target 
 - **`$from`**: The email address from which the alert will be sent. *(Default: `"alert@example.com"`)*  
 - **`$to`**: The recipient's email address for the alert. *(Default: `"admin@example.com"`)*  
 - **`$subject`**: The subject line of the email alert. *(Default: `"Nmap Scan Alert"`)*  
-- **`$body`**: The body of the email alert (initialized as an empty string).
+- **`$body`**: The body of the email alert (initialised as an empty string).
 
 ### Functionality
 1. **Run Nmap Scan**:
    - Executes the command `nmap` on the specified target and captures the output in the variable `$nmapResult`.
 
 2. **Check Port Status**:
-   - Analyzes the scan results to check if port 80 is open using a regex match:
+   - Analyses the scan results to check if port 80 is open using a regex match:
      ```powershell
      if ($nmapResult -match "80/tcp\s+open")
      ```
@@ -48,7 +48,7 @@ This PowerShell script performs a network scan using Nmap on a specified target 
      .\NmapScanAlert.ps1
      ```
 
-## Customization
+## Customisation
 - **Target Host**: Change the `$target` variable to scan a different host or IP.
 - **Email Settings**: Update the SMTP server, from/to email addresses, and subject as needed.
 - **Port Check**: Modify the port number in the regex match to check other ports as necessary.
