@@ -35,15 +35,15 @@ This script creates a Google Cloud Storage (GCS) bucket and a Pub/Sub topic with
 
 ## How to Run
 1. **Prerequisites**: Ensure you have Terraform installed and configured with access to your GCP account.
-2. **Initialization**:
-   - Run `terraform init` to initialize the configuration.
+2. **Initialisation**:
+   - Run `terraform init` to initialise the configuration.
 3. **Configuration**:
    - Modify the `project_id` and `location` variables in your Terraform configuration file as needed.
 4. **Apply**:
    - Run `terraform apply` to create the storage bucket and Pub/Sub topic.
 
-## Customization
-- **Name Suffix**: Change the `name_suffix` in the `locals` block to customize the resource names.
+## Customisation
+- **Name Suffix**: Change the `name_suffix` in the `locals` block to customise the resource names.
 - **Bucket Versioning**: You can disable versioning by removing or modifying the `versioning` block if it's not needed.
 - **Prevent Destroy**: To allow deletion of the bucket, change `prevent_destroy` to `false` in the lifecycle block.
 
