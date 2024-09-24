@@ -12,6 +12,10 @@ License:
 
 This project is licensed under the MIT License.
 
+Documentation:
+
+Each file has an associated .md file outlining key details for reference.
+
 Files:
 
 password_policy_compliance.ps1 - This automatically reviews, corrects and enforces the local password policy. This is based on learnings from the Security+ course.
