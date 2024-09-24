@@ -31,15 +31,15 @@ This script creates a Google Cloud Platform (GCP) network and a firewall rule. I
 
 ## How to Run
 1. **Prerequisites**: Ensure you have Terraform installed and configured with access to your GCP account.
-2. **Initialization**:
-   - Run `terraform init` to initialize the configuration.
+2. **Initialisation**:
+   - Run `terraform init` to initialise the configuration.
 3. **Configuration**:
    - Modify the `project_id` and `region` variables in your Terraform configuration file as needed.
 4. **Apply**:
    - Run `terraform apply` to create the network and firewall resources.
 
-## Customization
-- **Name Suffix**: Change the `name_suffix` in the `locals` block to customize the resource names.
+## Customisation
+- **Name Suffix**: Change the `name_suffix` in the `locals` block to customise the resource names.
 - **Firewall Rules**: Modify the `allow` blocks within the `google_compute_firewall` resource to adjust allowed protocols and ports.
 - **Source Ranges**: Update the `source_ranges` value to change the allowed IP ranges for incoming traffic.
 
