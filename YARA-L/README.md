@@ -12,6 +12,10 @@ License:
 
 This project is licensed under the MIT License.
 
+Documentation:
+
+Each file has an associated .md file outlining key details for reference.
+
 Files:
 
 out_of_hours_admin_login.yaral - This rule detects successful out-of-hours administrator login attempts. This is based on learnings from the Chronicle SIEM and SOAR Developer course.
