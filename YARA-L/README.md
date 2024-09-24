@@ -14,4 +14,5 @@ Each file has an associated .md file outlining key details for reference.
 
 ## Files
 **out_of_hours_admin_login.yaral** - This rule detects successful out-of-hours administrator login attempts. This is based on learnings from the Chronicle SIEM and SOAR Developer course.
+
 **unusual_file_access.yaral** - This rule detects unusual file access attempts based on given criteria. This is based on learnings from the Chronicle SIEM and SOAR Developer course.
