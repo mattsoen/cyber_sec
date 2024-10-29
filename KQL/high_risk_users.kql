@@ -1,0 +1,8 @@
+let HighRiskUsers = SigninLogs
+    | where ResultType != "0"  // Non-successful logins
+    | summarize Attempts = count() by UserPrincipalName
+    | where Attempts > 5;  // Adjust threshold as necessary
+IdentityRiskEvents
+| where RiskLevel == "High"
+| join kind=inner (HighRiskUsers) on UserPrincipalName
+| project TimeGenerated, UserPrincipalName, RiskLevel, Attempts
