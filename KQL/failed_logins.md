@@ -24,7 +24,7 @@ This KQL script queries the Azure Active Directory SigninLogs to identify failed
   - **`TimeGenerated`**: The time interval during which the failed logins occurred, rounded to the nearest hour.
 
 ## How to Execute
-1. **Prerequisites**: Ensure you have access to Azure Monitor or a similar service that allows running KQL queries against Azure AD SigninLogs.
+1. **Prerequisites**: Ensure you have access to a service that allows running KQL queries against Azure AD SigninLogs.
 2. **Execution**:
    - Copy and paste the following KQL script into your query editor:
      ```kql
@@ -40,7 +40,7 @@ This KQL script queries the Azure Active Directory SigninLogs to identify failed
 - **Result Filtering**: Adjust the filtering criteria (e.g., different `ResultType` values) to explore other types of login results.
 
 ## Notes
-- Ensure that you have the necessary permissions to access SigninLogs and run queries in Azure Monitor.
+- Ensure that you have the necessary permissions to access SigninLogs and run queries.
 - The `ResultType` for failed login attempts may vary; ensure to verify against current documentation for Azure AD logs.
 
 ## License
