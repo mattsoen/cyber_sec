@@ -4,7 +4,7 @@ This repository contains a collection of reusable KQL scripts and templates desi
 This directory features various KQL scripts that can assist incident responders to effectively query and analyse security-related data. Each script is designed to be adaptable, allowing you to easily customise them for your own projects and scanning needs.
 
 ## Prerequisites
-None
+Platform or service that permits running KQL scripts.
 
 ## License
 This project is licensed under the MIT License.
