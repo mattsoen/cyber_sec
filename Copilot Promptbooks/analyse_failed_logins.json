@@ -1,0 +1,36 @@
+{
+  "name": "Analyse Failed Logins",
+  "tags": [
+    "Logins",
+    "Entra"
+  ],
+  "description": "Retrieve the details of the latest failed logins.",
+  "inputs": [
+    "NUMBER"
+  ],
+  "plugins": [
+    "Microsoft Entra"
+  ],
+  "prompts": [
+    {
+      "id": 1,
+      "text": "Analyse the last <NUMBER> failed logins. Include details such as UPN, timestamps, IP addresses and reasons for failures."
+    },
+    {
+      "id": 2,
+      "text": "What are the authentication methods for the failed logins?"
+    },
+    {
+      "id": 3,
+      "text": "Were these accounts locked out?"
+    },
+    {
+      "id": 4,
+      "text": "How many login failures have these accounts recorded previously?"
+    },
+    {
+      "id": 5,
+      "text": "If any of these accounts have been created in the last week, prepare a report on the account. Include details such as account creation details, access policies and activity history."
+    }
+  ]
+}
