@@ -1,0 +1,33 @@
+main:
+  params: [inputs]
+  steps:  
+    - stop_instance:
+        call: googleapis.compute.v1.instances.stop
+        args:
+          project: ${inputs.project}          
+          zone: ${inputs.zone}                 
+          instance: ${inputs.instance}      
+    - assert_terminated:
+        call: assert_machine_status
+        args:
+          expected_status: "TERMINATED"
+          project: ${inputs.project}
+          zone: ${inputs.zone}
+          instance: ${inputs.instance}
+
+assert_machine_status:
+  params: [expected_status, project, zone, instance]
+  steps:
+    - get_instance:
+        call: googleapis.compute.v1.instances.get
+        args:
+          instance: ${instance}
+          project: ${project}
+          zone: ${zone}
+        result: instance
+    - compare:
+        switch:
+          - condition: ${instance.status == expected_status}
+            next: end
+    - fail:
+        raise: ${"Expected VM status is " + expected_status + ". Received " + instance.status + " instead."}
