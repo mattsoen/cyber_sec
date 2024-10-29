@@ -1,0 +1,9 @@
+let NormalOutboundTraffic = AzureActivity
+    | where OperationName == "Network Security Group" and ActivityStatus == "Succeeded"
+    | summarize OutboundTraffic = count() by DestinationCountry
+    | top 5 by OutboundTraffic;
+AzureActivity
+| where OperationName == "Network Security Group" and ActivityStatus == "Succeeded"
+| summarize OutboundTraffic = count() by DestinationCountry
+| where DestinationCountry !in (NormalOutboundTraffic.DestinationCountry)
+| order by OutboundTraffic desc
