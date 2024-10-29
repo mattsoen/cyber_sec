@@ -1,0 +1,45 @@
+{
+  "name": "Analyse Microsoft Sentinel Incident",
+  "tags": [
+    "Sentinel",
+    "Incident"
+  ],
+  "description": "Get a report about a specific incident, along with related alerts, reputation scores, users, and devices.",
+  "inputs": [
+    "SENTINEL_INCIDENT_ID"
+  ],
+  "plugins": [
+    "Microsoft Defender XDR",
+    "Microsoft Sentinel"
+  ],
+  "prompts": [
+    {
+      "id": 1,
+      "text": "Please summarise the details of Sentinel incident <SENTINEL_INCIDENT_ID>."
+    },
+    {
+      "id": 2,
+      "text": "What entities are associated with this incident?"
+    },
+    {
+      "id": 3,
+      "text": "What are the reputation scores for the IP addresses linked to this incident?"
+    },
+    {
+      "id": 4,
+      "text": "What authentication methods are configured for each user involved in this incident? Specifically, indicate whether they have Multi-Factor Authentication (MFA) enabled."
+    },
+    {
+      "id": 5,
+      "text": "For any users listed in the incident details, show the devices they have used recently and indicate their compliance status with company policies."
+    },
+    {
+      "id": 6,
+      "text": "From the devices mentioned earlier, provide details from Intune for the one that checked in most recently, particularly regarding its operating system update status."
+    },
+    {
+      "id": 7,
+      "text": "Draft an executive summary report of this investigation tailored for a non-technical audience."
+    }
+  ]
+}
