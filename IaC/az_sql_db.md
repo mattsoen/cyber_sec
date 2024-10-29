@@ -1,7 +1,7 @@
 # Documentation for Azure SQL Database Bicep Template
 
 ## Overview
-This Bicep template provisions an Azure SQL logical server and a SQL Database within a specified resource group. It utilizes Azure Key Vault to securely retrieve the administrator password.
+This Bicep template provisions an Azure SQL logical server and a SQL Database within a specified resource group. It utilises Azure Key Vault to securely retrieve the administrator password.
 
 ## Script Details
 
@@ -48,10 +48,10 @@ This Bicep template provisions an Azure SQL logical server and a SQL Database wi
      ```
 3. **Parameters**: You can pass parameters directly in the command line or use a parameters file.
 
-## Customization
-- **Server Name**: Modify the `serverName` parameter to customize the SQL logical server's name.
+## Customisation
+- **Server Name**: Modify the `serverName` parameter to customise the SQL logical server's name.
 - **Database Name**: Change the `sqlDBName` parameter to set a different name for the SQL Database.
-- **SKU Settings**: Adjust `skuName` and `skuTier` to customize the performance tier of the SQL Database.
+- **SKU Settings**: Adjust `skuName` and `skuTier` to customise the performance tier of the SQL Database.
 - **Key Vault Integration**: Ensure that the Azure Key Vault is properly configured and that the specified secret exists.
 
 ## Notes
