@@ -1,0 +1,36 @@
+{
+  "name": "Analyse Threat Actor Profile",
+  "tags": [
+    "Threat Actor",
+    "TTP"
+  ],
+  "description": "Get a report profiling a known actor with suggestions for protecting against common tools and tactics.",
+  "inputs": [
+    "ACTOR"
+  ],
+  "plugins": [
+    "Microsoft Defender Threat Intelligence"
+  ],
+  "prompts": [
+    {
+      "id": 1,
+      "text": "Provide a profile summary of <ACTOR>, including an executive summary at the start."
+    },
+    {
+      "id": 2,
+      "text": "Summarise the tactics, techniques, and procedures (TTPs) of this actor using MITRE ATT&CK techniques. Format the output as a bullet-point list, starting with the technique name and number, including a brief summary. Each technique should link directly to the MITRE ATT&CK website."
+    },
+    {
+      "id": 3,
+      "text": "If there are threat intelligence articles related to this threat actor, provide a list and summary of them, including links to the source material."
+    },
+    {
+      "id": 4,
+      "text": "Based on the actor's TTPs, what would be effective mitigation or defense methods to protect against this threat actor? Begin with specific examples and conclude with more generic ones. Format the output as a table with sections for 'Category', 'Description' (including the work to be done), and 'Reason' (with an example of why it relates to the threat actor)."
+    },
+    {
+      "id": 5,
+      "text": "Summarise insights about the threat actor in an executive report. Begin with metadata points including aliases, suspected origin country, targeted industries, exploited vulnerabilities, and tools leveraged, formatted as CSV and kept brief. Follow with a bullet-point list of key points about the threat actor as an executive summary. Then, create paragraph sections for an overview, TTPs, and mitigation strategies, ensuring it’s suitable for a less technical audience."
+    }
+  ]
+}
