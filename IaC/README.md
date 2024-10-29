@@ -4,9 +4,9 @@ This repository contains a collection of reusable IaC scripts and templates desi
 This directory features various IaC configurations. Each script is designed to be modular and adaptable, enabling you to easily customize them for your own projects.
 
 ## Prerequisites
-Ensure Terraform is installed (for Terraform scripts)
-Azure subscription (for Bicep scripts)
-Google Cloud subscription (for Terraform and YAML scripts)
+- Ensure Terraform is installed (for Terraform scripts)
+- Azure subscription (for Bicep scripts)
+- Google Cloud subscription (for Terraform and YAML scripts)
 
 ## License
 This project is licensed under the MIT License.
