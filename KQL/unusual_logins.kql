@@ -1,0 +1,9 @@
+let Threshold = 3;  // Define a threshold for unusual logins
+let UserLocations = SigninLogs
+    | where ResultType == "0"  // Successful login
+    | summarize DistinctLocations = dcount(Location) by UserPrincipalName;
+SigninLogs
+| where ResultType == "0"  // Successful login
+| summarize UnusualLocations = dcount(Location) by UserPrincipalName
+| join kind=inner (UserLocations) on UserPrincipalName
+| where UnusualLocations > Threshold
