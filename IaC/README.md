@@ -6,6 +6,7 @@ This directory features various IaC configurations. Each script is designed to b
 ## Prerequisites
 Ensure Terraform is installed (for Terraform scripts)
 Azure subscription (for Bicep scripts)
+Google Cloud subscription (for Terraform and YAML scripts)
 
 ## License
 This project is licensed under the MIT License.
@@ -21,3 +22,5 @@ Each file has an associated .md file outlining key details for reference.
 **az_sql_db.bicep** - This securely provisions an Azure SQL Server database. This is based on learnings from the Azure Security Engineer course.
 
 **az_storage.bicep** - This securely provisions an Azure Storage account. This is based on learnings from the Azure Security Engineer course.
+
+**gcp_stop_instance.yaml** - This stops a Google Cloud instance as part of an incident reponse Cloud Workflow. This is based on learnings from the Google Cloud Cybersecurity Professional course.
