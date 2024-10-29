@@ -13,8 +13,8 @@ This project is licensed under the MIT License.
 Each file has an associated .md file outlining key details for reference.
 
 ## Files
-**analyse_threat_actor.txt** - Generates a report profiling a known actor with suggestions for protecting against common tools and tactics. This is based on learnings from the Microsoft Security Operations Analyst course.
+**analyse_threat_actor.json** - Generates a report profiling a known actor with suggestions for protecting against common tools and tactics. This is based on learnings from the Microsoft Security Operations Analyst course.
 
-**analyse_sentinel_incident.txt** - Generates a report about a specific Microsoft Sentinel incident, along with related alerts, reputation scores, users, and devices. This is based on learnings from the Microsoft Security Operations Analyst course.
+**analyse_sentinel_incident.json** - Generates a report about a specific Microsoft Sentinel incident, along with related alerts, reputation scores, users, and devices. This is based on learnings from the Microsoft Security Operations Analyst course.
 
-**analyse_failed_logins.txt** - Retrieves the details of the latest failed logins. This is based on learnings from the Microsoft Security Operations Analyst course.
+**analyse_failed_logins.json** - Retrieves the details of the latest failed logins. This is based on learnings from the Microsoft Security Operations Analyst course.
