@@ -13,4 +13,6 @@ This project is licensed under the MIT License.
 Each file has an associated .md file outlining key details for reference.
 
 ## Files
-**VT_ip_address_reputation_analysis.py** - This script retrieves current network connections and generates a reputation analysis report for each IPv4 address listed.
+**vt_ip_address_reputation_analysis.py** - This script retrieves current network connections and generates a reputation analysis report for each IPv4 address listed.
+
+**vt_url_reputation_analysis.py** - This script retrieves a list of URL's and generates a reputation analysis report for each.
