@@ -28,7 +28,7 @@ def get_foreign_ips():
 
     return foreign_ips
 
-def analyze_ip(ip):
+def analyse_ip(ip):
     response = requests.get(VT_API_URL + ip, headers={'x-apikey': API_KEY})
     return response.json()
 
@@ -37,7 +37,7 @@ df_list = []
 if __name__ == "__main__": 
     foreign_ips = get_foreign_ips()
     for ip in foreign_ips:
-        result = analyze_ip(ip)
+        result = analyse_ip(ip)
         ip_address = result['data']['id']
         last_analysis_date = result['data']['attributes']['last_analysis_date']
         last_analysis_stats = result['data']['attributes']['last_analysis_stats']
